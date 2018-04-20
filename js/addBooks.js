@@ -9,4 +9,7 @@ bookBuilder("Thrawn (Star Wars)", "Timothy Zahn", "science fiction", "1101967021
 bookBuilder("The Fellowship of the Ring", "J.R.R. Tolkien", "fantasy", "0547928211", "https://images-na.ssl-images-amazon.com/images/I/51tW-UJVfHL._SX321_BO1,204,203,200_.jpg")
 bookBuilder("1984", "George Orwell", "political fiction", "0452284236", "https://www.penguin.co.uk/content/dam/catalogue/pim/editions/428/9780141036144/cover.jpg")
 bookBuilder("The Dark Tower I: The Gunslinger", "Stephen King", "fantasy", "1501143514", "https://pictures.abebooks.com/isbn/9780670032549-us.jpg")
-bookBuilder("All Quiet on the Western Front", "Erich Maria Remarque", "war", "1101967021", "https://images-na.ssl-images-amazon.com/images/I/516yP3uDS1L._SX302_BO1,204,203,200_.jpg")
+bookBuilder("The Last Lion: Winston Spencer Churchill: Defender of the Realm, 1940-1965", "William Manchester", "biography", "0345548639", "https://images-na.ssl-images-amazon.com/images/I/51v24SrRxYL._AC_UL320_SR202,320_.jpg")
+bookBuilder("Steve Jobs: The Man Who Thought Different: A Biography", "Karen Blumenthal", "biography", "125001445X", "https://images-na.ssl-images-amazon.com/images/I/81IX96nZmuL.jpg")
+bookBuilder("The Girl Who Came Back", "Kerry Wilkinson", "thriller", "1786812665", "https://images-na.ssl-images-amazon.com/images/I/51%2B7u0FevsL.jpg")
+bookBuilder("No Exit", "Taylor Adams", "thriller", "1912106949", "https://images-na.ssl-images-amazon.com/images/I/51R1od5tsaL.jpg")
