@@ -1,6 +1,6 @@
 //function to push objects into the library array
 
-const bookBuidler = (title, author, genre, isbn) => {
+const bookBuilder = (title, author, genre, isbn) => {
     Library.push(
         Object.create({}, {
             "title": {
