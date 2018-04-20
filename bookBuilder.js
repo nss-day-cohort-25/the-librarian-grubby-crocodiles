@@ -35,3 +35,4 @@ const bookBuidler = (title, author, genre, isbn) => {
 
 
 //test calls 
+bookBuilder("Frankenstein", "Mary Shelly", "Horror", "123214")
