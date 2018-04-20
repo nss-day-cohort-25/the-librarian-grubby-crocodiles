@@ -32,6 +32,11 @@ const bookBuilder = (title, author, genre, isbn, photoSrc) => {
             "photoSrc": {
                 value: photoSrc,
                 enumerable: true,
+            },
+            "customer": {
+                value: "",
+                writable: true,
+                enumerable: true
             }
         })
     )
