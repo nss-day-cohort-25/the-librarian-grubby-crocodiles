@@ -25,7 +25,7 @@ const librarian = Object.create({},{
             }else{
                 for(var book in Library){
                     if(Library[book].title == bookTitle){
-                        Library[book].checkedout = true;
+                        Library[book].checkedOut = true;
                         Library[book].customer = customer;
                         Library[book].dueDate = setDueDate();
                         return true;
@@ -34,5 +34,5 @@ const librarian = Object.create({},{
             }
         } 
     },
-    
+
 })
