@@ -3,12 +3,14 @@ const librarian = Object.create({},{
         value: function register(customer){
             const ID = '_' + Math.random().toString(36).substr(2, 9);
             customer.cardnumber = ID;
+            pushToTimeline("Librarian", "provided a library card to " + customer.firstName)
         }
     },
     checkout: {
         value: function checkout(bookTitle, customer){
             var includes = Library.some( book =>book["title"] === bookTitle);
             if(!includes){
+                pushToTimeline("Librarian", "attempted to checkout " + bookTitle + " to " + customer + ", but it was already checked out")
                 return false;
             }else{
                 for(var book in Library){
@@ -16,6 +18,7 @@ const librarian = Object.create({},{
                         Library[book].checkedOut = true;
                         Library[book].customer = customer;
                         Library[book].dueDate = librarian.setDueDate();
+                        pushToTimeline("Librarian", "checked out " + bookTitle + " to " + customer)
                         return true;
                     }
                 }
@@ -46,8 +49,10 @@ const librarian = Object.create({},{
                     Library[i].dueDate = "";
                     Library.checkedOut = false;
                     if(eightHourWorkDay > dueDateTime){
+                        pushToTimeline("Librarian", "checked in " + book + " with a late fee")
                         return "The book is late. We have assessed a $5.00 fee to your account. If you need more time, please reach out to us to re-check the book out in the future."
                     }else{
+                        pushToTimeline("Librarian", "checked in " + book)
                         return "Thanks for returning your book. Keep reading!"
                     }
                 }
@@ -65,15 +70,10 @@ const librarian = Object.create({},{
             })
             response = response.slice(0, response.length - 2)
             response += "."
-            //will eventually rewrite to call get current date function
-            const thisDate = timeStamp();
-            timeline.push(
-                {
-                    who: "Librarian",
-                    what: "provided information about " + genre + " books to " + requestee,
-                    date: thisDate
-                }
-            )
+            //adds event to timeline
+            pushToTimeline("Librarian", "provided information about " + genre + " books to " + requestee)
+
+
             return response
 
         }
