@@ -20,8 +20,8 @@ const jeremiah = Object.create({}, {
         writable: true
     },
     customercheckout: {
-        function(book) {
-            if (librarian.checkout(book, this.name)) {
+        value:function(book) {
+            if (librarian.checkout(book,this.name)) {
                 this.bookshelf.push(Library.find(function (obj) {
                     return obj.title == book;
                 }
@@ -65,7 +65,7 @@ const riley = Object.create({}, {
         writable: true
     },
     customercheckout: {
-        function(book) {
+        value:function(book) {
             if (librarian.checkout(book, this.name)) {
                 this.bookshelf.push(Library.find(function (obj) {
                     return obj.title == book;
