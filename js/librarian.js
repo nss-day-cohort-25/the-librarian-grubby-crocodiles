@@ -33,5 +33,26 @@ const librarian = Object.create({},{
             var dueDate = month + "-" + day + "," + year;
             return dueDate;
         } 
+    },
+    returnBook: {
+        value: function(book){
+            for(var i =0;i <Library.length;i++){
+                if(Library[i].title == book){
+                    var today = new Date();
+                    var todayTime = today.getTime(); //miliseconds
+                    let eightHourWorkDay = todayTime + (1000 * 60 * 60 * 8) // adds eight hours to the day
+                    var dueDateTime = Date.parse(Library[i].dueDate); // miliseconds
+                    if(eightHourWorkDay > dueDateTime){
+                        return "late"
+                    }else{
+                        return "not late"
+                    }
+                    Library[i].dueDate = "";
+                    break;
+                }
+            }
+        }
     }
 })
+
+
