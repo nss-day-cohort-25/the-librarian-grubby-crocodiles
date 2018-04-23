@@ -39,26 +39,6 @@ const librarian = Object.create({},{
             return dueDate;
         } 
     },
-
-    returnBook: {
-        value: function(book){
-            for(var i =0;i <Library.length;i++){
-                if(Library[i].title == book){
-                    var today = new Date();
-                    var todayTime = today.getTime(); //miliseconds
-                    let eightHourWorkDay = todayTime + (1000 * 60 * 60 * 8) // adds eight hours to the day
-                    var dueDateTime = Date.parse(Library[i].dueDate); // miliseconds
-                    Library[i].dueDate = "";
-                    Library.checkedOut = false;
-                    if(eightHourWorkDay > dueDateTime){
-                        return "The book is late. We have assessed a $5.00 fee to your account. If you need more time, please reach out to us to re-check the book out in the future."
-                    }else{
-                        return "Thanks for returning your book. Keep reading!"
-                    }
-                
-                }
-            },
-
     giveInfo: {
         value: function (genre, requestee) {
             let response = ""
@@ -79,9 +59,7 @@ const librarian = Object.create({},{
                 }
             )
             return response
-
         }
     }
 })
-
 
