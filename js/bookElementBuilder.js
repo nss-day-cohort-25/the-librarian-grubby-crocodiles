@@ -1,7 +1,7 @@
 // function to return card based on which book is passed to it as argument
-const section = document.createElement('section')
-const fragment = document.createDocumentFragment()
 const bookElement = book => {
+    const section = document.createElement('section')
+    const fragment = document.createDocumentFragment()
     Library.forEach(bookItem => {
         if (book === bookItem.title) {
             //create elements for each book item
