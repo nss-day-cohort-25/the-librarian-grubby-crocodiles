@@ -42,13 +42,14 @@ const librarian = Object.create({},{
                     var todayTime = today.getTime(); //miliseconds
                     let eightHourWorkDay = todayTime + (1000 * 60 * 60 * 8) // adds eight hours to the day
                     var dueDateTime = Date.parse(Library[i].dueDate); // miliseconds
+                    Library[i].dueDate = "";
+                    Library.checkedOut = false;
                     if(eightHourWorkDay > dueDateTime){
                         return "late"
                     }else{
                         return "not late"
                     }
-                    Library[i].dueDate = "";
-                    break;
+                
                 }
             }
         }
