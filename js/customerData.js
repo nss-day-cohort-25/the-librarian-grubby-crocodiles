@@ -19,7 +19,7 @@ const jeremiah = Object.create({}, {
         value: [],
         writable: true
     },
-    customercheckout: {
+    customerCheckout: {
         value: function (book) {
             if (librarian.checkout(book, this.name)) {
                 this.bookshelf.push(Library.find(function (obj) {
@@ -69,7 +69,7 @@ const riley = Object.create({}, {
         value: [],
         writable: true
     },
-    customercheckout: {
+    customerCheckout: {
         value: function (book) {
             if (librarian.checkout(book, this.name)) {
                 this.bookshelf.push(Library.find(function (obj) {
@@ -120,7 +120,7 @@ const patrick = Object.create({}, {
         value: [],
         writable: true
     },
-    customercheckout: {
+    customerCheckout: {
         function(book) {
             if (librarian.checkout(book, this.name)) {
                 this.bookshelf.push(Library.find(function (obj) {
@@ -170,7 +170,7 @@ const jacob = Object.create({}, {
         value: [],
         writable: true
     },
-    customercheckout: {
+    customerCheckout: {
         function(book) {
             if (librarian.checkout(book, this.name)) {
                 this.bookshelf.push(Library.find(function (obj) {
