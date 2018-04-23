@@ -1,8 +1,3 @@
-
-const giveInfo = (genre, requestee) => {
-    
-}
-
 const librarian = Object.create({},{
     register: {
         value: function register(customer){
@@ -57,7 +52,8 @@ const librarian = Object.create({},{
                     }
                 }
             }
-        },
+        }
+    },
 
     giveInfo: {
         value: function (genre, requestee) {
@@ -82,6 +78,6 @@ const librarian = Object.create({},{
 
         }
     }
-})
+}
 
 
