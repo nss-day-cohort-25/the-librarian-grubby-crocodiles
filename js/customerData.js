@@ -29,7 +29,7 @@ const jeremiah = Object.create({}, {
             }
         }
     },
-    return: {
+    returnBook: {
         value: function (book) {
             this.bookshelf.forEach(element => {
                 if (element.title === book) {
