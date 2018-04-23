@@ -55,9 +55,9 @@ const librarian = Object.create({},{
                     }else{
                         return "Thanks for returning your book. Keep reading!"
                     }
-                
                 }
-            },
+            }
+        },
 
     giveInfo: {
         value: function (genre, requestee) {
