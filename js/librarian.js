@@ -65,15 +65,10 @@ const librarian = Object.create({},{
             })
             response = response.slice(0, response.length - 2)
             response += "."
-            //will eventually rewrite to call get current date function
-            const thisDate = timeStamp();
-            timeline.push(
-                {
-                    who: "Librarian",
-                    what: "provided information about " + genre + " books to " + requestee,
-                    date: thisDate
-                }
-            )
+            //adds event to timeline
+            pushToTimeline("Librarian", "provided information about " + genre + " books to " + requestee)
+
+
             return response
 
         }
