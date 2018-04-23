@@ -19,18 +19,15 @@ const jeremiah = Object.create({}, {
         value: [],
         writable: true
     },
-    checkout: {
-        value: function (book) {
-            Library.forEach(element => {
-                if (element.title === book) {
-                    if (element.checkedOut === false) {
-                        this.bookshelf.push(element)
-                    }
+    customercheckout: {
+        function(book) {
+            if (librarian.checkout(book, this.name)) {
+                this.bookshelf.push(Library.find(function (obj) {
+                    return obj.title == book;
                 }
-
-            });
+                ))
+            }
         }
-
     },
     return: {
         value: function (book) {
@@ -67,18 +64,15 @@ const riley = Object.create({}, {
         value: [],
         writable: true
     },
-    checkout: {
-        value: function (book) {
-            Library.forEach(element => {
-                if (element.title === book) {
-                    if (element.checkedOut === false) {
-                        this.bookshelf.push(element)
-                    }
+    customercheckout: {
+        function(book) {
+            if (librarian.checkout(book, this.name)) {
+                this.bookshelf.push(Library.find(function (obj) {
+                    return obj.title == book;
                 }
-
-            });
+                ))
+            }
         }
-
     },
     return: {
         value: function (book) {
@@ -115,18 +109,15 @@ const patrick = Object.create({}, {
         value: [],
         writable: true
     },
-    checkout: {
-        value: function (book) {
-            Library.forEach(element => {
-                if (element.title === book) {
-                    if (element.checkedOut === false) {
-                        this.bookshelf.push(element)
-                    }
+    customercheckout: {
+        function(book) {
+            if (librarian.checkout(book, this.name)) {
+                this.bookshelf.push(Library.find(function (obj) {
+                    return obj.title == book;
                 }
-
-            });
+                ))
+            }
         }
-
     },
     return: {
         value: function (book) {
@@ -163,18 +154,15 @@ const jacob = Object.create({}, {
         value: [],
         writable: true
     },
-    checkout: {
-        value: function (book) {
-            Library.forEach(element => {
-                if (element.title === book) {
-                    if (element.checkedOut === false) {
-                        this.bookshelf.push(element)
-                    }
+    customercheckout: {
+        function(book) {
+            if (librarian.checkout(book, this.name)) {
+                this.bookshelf.push(Library.find(function (obj) {
+                    return obj.title == book;
                 }
-
-            });
+                ))
+            }
         }
-
     },
     return: {
         value: function (book) {
