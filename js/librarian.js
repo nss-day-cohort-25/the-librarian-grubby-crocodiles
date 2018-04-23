@@ -3,6 +3,7 @@ const librarian = Object.create({},{
         value: function register(customer){
             const ID = '_' + Math.random().toString(36).substr(2, 9);
             customer.cardnumber = ID;
+            pushToTimeline("Librarian", "provided a library card to " + customer.firstName)
         }
     },
     checkout: {
