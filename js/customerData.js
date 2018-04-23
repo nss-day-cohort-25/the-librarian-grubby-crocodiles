@@ -20,13 +20,18 @@ const jeremiah = Object.create({}, {
         writable: true
     },
     customercheckout: {
-        value:function(book) {
-            if (librarian.checkout(book,this.name)) {
+        value: function (book) {
+            if (librarian.checkout(book, this.name)) {
                 this.bookshelf.push(Library.find(function (obj) {
                     return obj.title == book;
                 }
                 ))
             }
+        }
+    },
+    askgenre: {
+        value: function (genre) {
+            librarian.giveInfo(genre, this.firstName)
         }
     },
     returnBook: {
@@ -65,7 +70,7 @@ const riley = Object.create({}, {
         writable: true
     },
     customercheckout: {
-        value:function(book) {
+        value: function (book) {
             if (librarian.checkout(book, this.name)) {
                 this.bookshelf.push(Library.find(function (obj) {
                     return obj.title == book;
@@ -74,7 +79,13 @@ const riley = Object.create({}, {
             }
         }
     },
-    return: {
+
+    askgenre: {
+        value: function (genre) {
+            librarian.giveInfo(genre, this.firstName)
+        }
+    },
+    returnBook: {
         value: function (book) {
             this.bookshelf.forEach(element => {
                 if (element.title === book) {
@@ -119,7 +130,12 @@ const patrick = Object.create({}, {
             }
         }
     },
-    return: {
+    askgenre: {
+        value: function (genre) {
+            librarian.giveInfo(genre, this.firstName)
+        }
+    },
+    returnBook: {
         value: function (book) {
             this.bookshelf.forEach(element => {
                 if (element.title === book) {
@@ -164,7 +180,12 @@ const jacob = Object.create({}, {
             }
         }
     },
-    return: {
+    askgenre: {
+        value: function (genre) {
+            librarian.giveInfo(genre, this.firstName)
+        }
+    },
+    returnBook: {
         value: function (book) {
             this.bookshelf.forEach(element => {
                 if (element.title === book) {
