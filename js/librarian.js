@@ -45,9 +45,9 @@ const librarian = Object.create({},{
                     Library[i].dueDate = "";
                     Library.checkedOut = false;
                     if(eightHourWorkDay > dueDateTime){
-                        return "late"
+                        return "The book is late. We have assessed a $5.00 fee to your account. If you need more time, please reach out to us to re-check the book out in the future."
                     }else{
-                        return "not late"
+                        return "Thanks for returning your book. Keep reading!"
                     }
                 
                 }
